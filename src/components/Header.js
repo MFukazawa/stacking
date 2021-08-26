@@ -4,14 +4,14 @@ import styled from "styled-components";
 function Header({ children }) {
   return (
     <Wrapper>
-      <Title>App Name</Title>
+      <Title>重ね合わせコンテキストと<code>z-index</code></Title>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.section`
   height: 75px;
-  background: dodgerblue;
+  background: hsl(270deg 29% 92%);
   padding: 24px;
   text-align: center;
 `;

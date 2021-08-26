@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import styled from "styled-components";
 
 function Sidebar() {
@@ -8,13 +9,13 @@ function Sidebar() {
       <Navigation>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="/">Other thing</a>
+            <Link to="/flow">Flowレイアウト</Link>
           </li>
         </ul>
       </Navigation>
@@ -25,7 +26,7 @@ function Sidebar() {
 const Wrapper = styled.aside`
   width: 240px;
   min-height: 100vh;
-  background: hsl(0deg, 0%, 90%);
+  background: hsl(40deg 100% 95%);
   padding: 24px 8px;
   position: absolute;
   top: 0;
