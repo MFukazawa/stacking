@@ -1,14 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from "styled-components";
 
 const Flow = () => {
+  const [negMargin, setNegMargin] = useState(0)
   return (
       <MainContent>
-        <Go />
-        <Lakers />
+        <FlowBox>
+          <Go />
+          <Lakers style={{ marginTop: '-' + negMargin + 'px' }} />
+        </FlowBox>
+
+        <div>
+          <label>ネガティブマージン</label>
+          <input type="range" value={negMargin} onChange={(e) => setNegMargin(e.target.value)} />
+        </div>
       </MainContent>
   )
 }
+
+const FlowBox = styled.section`
+  width: 150px;
+  height: 200px;
+  outline: 1px solid #000;
+`
 
 const Go = styled.div`
   width: 100px;
@@ -19,6 +33,7 @@ const Go = styled.div`
 const Lakers = styled.div`
   width: 100px;
   height: 100px;
+  margin: 0 0 0 50px;
   background: hsl(41deg 98% 57%);
 `
 
