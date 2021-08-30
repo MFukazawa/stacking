@@ -9,7 +9,7 @@ function Header({ children }) {
   );
 }
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
   height: 75px;
   background: hsl(270deg 29% 92%);
   padding: 24px;

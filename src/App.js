@@ -8,9 +8,10 @@ import Header from './components/Header';
 import GlobalStyles from './GlobalStyles';
 import HelpButton from './components/HelpButton';
 import Sidebar from './components/Sidebar';
-import About from './pages/about';
+import Stacking from './pages/stacking';
 import Flow from './pages/flow';
 import Home from './pages/home';
+import Isolate from './pages/isolate'
 
 export default function App() {
   return (
@@ -24,8 +25,9 @@ export default function App() {
             <Contents>
               <Switch>
                 <Route exact component={Flow} path='/flow' />
-                <Route exact component={About} path='/about' />
+                <Route exact component={Stacking} path='/stacking' />
                 <Route exact component={Home} path='/' />
+                <Route exact component={Isolate} path='/isolate' />
               </Switch>
             </Contents>
             <Sidebar />
@@ -52,8 +54,8 @@ const Contents = styled.div`
   padding: 0 240px 0 0;
 `
 
-const HeaderWrapper = styled.div`
+const HeaderWrapper = styled.header`
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 `;

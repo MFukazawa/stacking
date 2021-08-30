@@ -2,39 +2,49 @@ import React, { useState } from 'react'
 import styled from "styled-components";
 
 const Flow = () => {
-  const [negMargin, setNegMargin] = useState(0)
+  const [negativeMargin, setNegativeMargin] = useState(50)
   return (
       <MainContent>
-        <FlowBox>
-          <Go />
-          <Lakers style={{ marginTop: '-' + negMargin + 'px' }} />
-        </FlowBox>
+        <FlowContainer>
+          <BoxOne>これ読んでね</BoxOne>
+          <BoxTwo style={{ marginTop: `-${negativeMargin}px`}}>これも読んでね</BoxTwo>
+        </FlowContainer>
 
-        <div>
+        <InputContainer>
           <label>ネガティブマージン</label>
-          <input type="range" value={negMargin} onChange={(e) => setNegMargin(e.target.value)} />
-        </div>
+          <input type="range" value={negativeMargin} onChange={(e) => setNegativeMargin(e.target.value)} />
+          <p>{-negativeMargin}px</p>
+        </InputContainer>
       </MainContent>
   )
 }
 
-const FlowBox = styled.section`
-  width: 150px;
+const FlowContainer = styled.section`
   height: 200px;
-  outline: 1px solid #000;
+  margin: 0 auto 50px;
 `
 
-const Go = styled.div`
+const FlowBox = styled.div`
   width: 100px;
   height: 100px;
+  border: 3px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+`
+
+const BoxOne = styled(FlowBox)`
   background: hsl(271deg 56% 33%);
+  color: #fff;
+  position: relative;
+  z-index: 1;
 `
 
-const Lakers = styled.div`
-  width: 100px;
-  height: 100px;
+const BoxTwo = styled(FlowBox)`
   margin: 0 0 0 50px;
   background: hsl(41deg 98% 57%);
+  position: relative;
 `
 
 const MainContent = styled.main`
@@ -44,5 +54,11 @@ const MainContent = styled.main`
   padding: 64px;
 `;
 
+const InputContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
 
 export default Flow

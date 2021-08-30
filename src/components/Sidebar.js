@@ -12,10 +12,13 @@ function Sidebar() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/flow">Flowレイアウト</Link>
           </li>
           <li>
-            <Link to="/flow">Flowレイアウト</Link>
+            <Link to="/stacking">重ね合わせコンテキスト</Link>
+          </li>
+          <li>
+            <Link to="/isolate">Isolate</Link>
           </li>
         </ul>
       </Navigation>
