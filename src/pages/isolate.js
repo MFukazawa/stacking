@@ -5,38 +5,49 @@ import Medal from '../components/Medal';
 
 const Isolate = () => {
   return (
-    <div>
+    <IsolateWrapper>
       <MedalContainer>
         <Card>
           <Medal silver>Second Prize</Medal>
         </Card>
-        <Card>
+        <Card primary>
           <Medal gold>First Prize</Medal>
         </Card>
         <Card>
           <Medal>Third Prize</Medal>
         </Card>
       </MedalContainer>
-      <p>
+      <Credits>
         Box shadows by{' '}
         <a href='https://tobiasahlin.com/blog/layered-smooth-box-shadows/'>
           Tobias Ahlin
         </a>
-      </p>
-      <p>
+      </Credits>
+      <Credits>
         Medals by{' '}
         <a href='https://codepen.io/ViRPo/pen/WNNoRKB?editors=1100'>
           Peter Hraska
         </a>
-      </p>
-    </div>
+      </Credits>
+    </IsolateWrapper>
   );
 };
 
+const IsolateWrapper = styled.div`
+  background: #eee;
+  height: 100vh;
+  padding: 0 20px;
+  isolation: isolate;
+`
+
+const Credits = styled.p`
+  text-align: center;
+  margin: 0 0 10px;
+`
+
 const MedalContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 50px 0;
 `;
 
 export default Isolate;

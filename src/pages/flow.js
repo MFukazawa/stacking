@@ -6,8 +6,8 @@ const Flow = () => {
   return (
       <MainContent>
         <FlowContainer>
-          <BoxOne>これ読んでね</BoxOne>
-          <BoxTwo style={{ marginTop: `-${negativeMargin}px`}}>これも読んでね</BoxTwo>
+          <BoxTwo>2</BoxTwo>
+          <BoxOne style={{ marginTop: `-${negativeMargin}px`}}>1</BoxOne>
         </FlowContainer>
 
         <InputContainer>
@@ -37,14 +37,14 @@ const FlowBox = styled.div`
 const BoxOne = styled(FlowBox)`
   background: hsl(271deg 56% 33%);
   color: #fff;
-  position: relative;
-  z-index: 1;
+  /* position: relative; */
+  /* z-index: 1; */
 `
 
 const BoxTwo = styled(FlowBox)`
   margin: 0 0 0 50px;
   background: hsl(41deg 98% 57%);
-  position: relative;
+  /* position: relative; */
 `
 
 const MainContent = styled.main`

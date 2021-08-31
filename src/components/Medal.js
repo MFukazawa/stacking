@@ -10,7 +10,7 @@ const Medal = ({ children, gold, silver }) => {
       <RibbonLeft></RibbonLeft>
       <RibbonRight></RibbonRight>
     </MedalBase>
-    <div>{children}</div>
+    <MedalLabel>{children}</MedalLabel>
     </>
   );
 };
@@ -71,5 +71,9 @@ const RibbonRight = styled(Ribbon)`
   border-color: #f31903 #f31903 transparent #f31903;
   transform: rotate(-20deg) translateZ(-48px);
 `;
+
+const MedalLabel = styled.p`
+  margin: 20px 0 10px;
+`
 
 export default Medal;

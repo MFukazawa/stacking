@@ -50,7 +50,7 @@ const Relative = styled.div`
   position: relative;
 `
 
-const Contents = styled.div`
+const Contents = styled.article`
   padding: 0 240px 0 0;
 `
 
